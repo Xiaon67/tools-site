@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import RelatedTools from '../components/RelatedTools'
 
 export default function JsonFormatter() {
   const [input, setInput] = useState('')
@@ -94,6 +95,17 @@ export default function JsonFormatter() {
             Minify
           </button>
         </div>
+      </div>
+
+      <RelatedTools currentPath="/json-formatter" />
+
+      <div className="mt-8 prose prose-gray max-w-none">
+        <h2 className="text-xl font-semibold text-gray-900">About JSON Formatter</h2>
+        <p className="text-gray-600 text-sm">
+          Format, validate, and beautify JSON data with our free online JSON formatter. Paste your JSON and instantly 
+          get properly indented, readable output. Also supports minifying JSON to reduce file size. 
+          Perfect for developers working with APIs, config files, or any JSON data.
+        </p>
       </div>
     </div>
   )

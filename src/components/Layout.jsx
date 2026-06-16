@@ -1,5 +1,6 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
+import AdSense from './AdSense'
 
 export default function Layout({ children }) {
   return (
@@ -7,15 +8,18 @@ export default function Layout({ children }) {
       <Navbar />
       <main className="flex-1">{children}</main>
 
-      {/* AdSense placeholder - replace with your AdSense code */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gray-100 border-t border-gray-200 text-center py-2 text-xs text-gray-400 z-40">
-        {/* AdSense Ad Unit - Replace this with your AdSense code */}
-        <div id="ad-banner-bottom" className="h-[90px] flex items-center justify-center">
-          Ad Space (728x90)
+      {/* Bottom Ad Banner */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-40">
+        <div className="max-w-7xl mx-auto px-4 py-2 flex justify-center">
+          <AdSense slot="1111111111" format="horizontal" />
         </div>
       </div>
 
-      <div className="pb-[100px]">
+      <div className="pb-[110px]">
+        {/* Sidebar Ad (shows on tool pages) */}
+        <div className="max-w-7xl mx-auto px-4 py-4">
+          <AdSense slot="2222222222" format="auto" />
+        </div>
         <Footer />
       </div>
     </div>

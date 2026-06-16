@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import RelatedTools from '../components/RelatedTools'
 
 const loremWords = [
   'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit',
@@ -105,6 +106,16 @@ export default function LoremIpsum() {
             </div>
           </div>
         )}
+      </div>
+
+      <RelatedTools currentPath="/lorem-ipsum" />
+
+      <div className="mt-8 prose prose-gray max-w-none">
+        <h2 className="text-xl font-semibold text-gray-900">About Lorem Ipsum Generator</h2>
+        <p className="text-gray-600 text-sm">
+          Generate placeholder text (lorem ipsum) for your designs, mockups, and layouts. 
+          Customize the number of paragraphs and words per paragraph.
+        </p>
       </div>
     </div>
   )

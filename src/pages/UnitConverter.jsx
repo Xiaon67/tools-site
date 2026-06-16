@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import RelatedTools from '../components/RelatedTools'
 
 const categories = {
   length: {
@@ -118,6 +119,16 @@ export default function UnitConverter() {
             </select>
           </div>
         </div>
+      </div>
+
+      <RelatedTools currentPath="/unit-converter" />
+
+      <div className="mt-8 prose prose-gray max-w-none">
+        <h2 className="text-xl font-semibold text-gray-900">About Unit Converter</h2>
+        <p className="text-gray-600 text-sm">
+          Convert between different units of measurement including length, weight, temperature, and volume. 
+          Supports metric and imperial units with instant results.
+        </p>
       </div>
     </div>
   )

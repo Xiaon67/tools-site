@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react'
+import RelatedTools from '../components/RelatedTools'
 
 export default function PasswordGenerator() {
   const [length, setLength] = useState(16)
@@ -106,6 +107,17 @@ export default function PasswordGenerator() {
         >
           Generate Password
         </button>
+      </div>
+
+      <RelatedTools currentPath="/password-generator" />
+
+      <div className="mt-8 prose prose-gray max-w-none">
+        <h2 className="text-xl font-semibold text-gray-900">About Password Generator</h2>
+        <p className="text-gray-600 text-sm">
+          Create strong, secure passwords with our free password generator. Customize length (8-64 characters), 
+          include uppercase, lowercase, numbers, and symbols. Uses the Web Crypto API for true randomness. 
+          Never use weak passwords like "password123" — generate a unique, strong password for every account.
+        </p>
       </div>
     </div>
   )

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import SEO from './components/SEO'
 import Home from './pages/Home'
 import WordCounter from './pages/WordCounter'
 import PasswordGenerator from './pages/PasswordGenerator'
@@ -10,10 +11,12 @@ import Base64Encoder from './pages/Base64Encoder'
 import JsonFormatter from './pages/JsonFormatter'
 import LoremIpsum from './pages/LoremIpsum'
 import ColorPicker from './pages/ColorPicker'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
     <Router>
+      <SEO />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,6 +29,7 @@ export default function App() {
           <Route path="/json-formatter" element={<JsonFormatter />} />
           <Route path="/lorem-ipsum" element={<LoremIpsum />} />
           <Route path="/color-picker" element={<ColorPicker />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </Router>

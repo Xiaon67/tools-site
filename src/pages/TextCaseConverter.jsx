@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import RelatedTools from '../components/RelatedTools'
 
 const cases = [
   { name: 'lowercase', fn: (t) => t.toLowerCase() },
@@ -51,6 +52,16 @@ export default function TextCaseConverter() {
             </div>
           ))}
         </div>
+      </div>
+
+      <RelatedTools currentPath="/text-case-converter" />
+
+      <div className="mt-8 prose prose-gray max-w-none">
+        <h2 className="text-xl font-semibold text-gray-900">About Text Case Converter</h2>
+        <p className="text-gray-600 text-sm">
+          Convert text between different cases: lowercase, UPPERCASE, Title Case, sentence case, 
+          camelCase, PascalCase, snake_case, kebab-case, and CONSTANT_CASE.
+        </p>
       </div>
     </div>
   )

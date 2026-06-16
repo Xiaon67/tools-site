@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import RelatedTools from '../components/RelatedTools'
 
 export default function QRCodeGenerator() {
   const [text, setText] = useState('https://')
@@ -124,6 +125,16 @@ export default function QRCodeGenerator() {
         <div className="mt-8 flex justify-center">
           <canvas ref={canvasRef} className="border border-gray-200 rounded-xl" />
         </div>
+      </div>
+
+      <RelatedTools currentPath="/qr-code-generator" />
+
+      <div className="mt-8 prose prose-gray max-w-none">
+        <h2 className="text-xl font-semibold text-gray-900">About QR Code Generator</h2>
+        <p className="text-gray-600 text-sm">
+          Generate QR codes for any URL, text, or data. Customize the size and download as PNG. 
+          Perfect for sharing links, WiFi passwords, contact info, and more.
+        </p>
       </div>
     </div>
   )

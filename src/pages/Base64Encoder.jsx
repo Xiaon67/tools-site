@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import RelatedTools from '../components/RelatedTools'
 
 export default function Base64Encoder() {
   const [input, setInput] = useState('')
@@ -85,6 +86,16 @@ export default function Base64Encoder() {
             />
           </div>
         )}
+      </div>
+
+      <RelatedTools currentPath="/base64-encoder" />
+
+      <div className="mt-8 prose prose-gray max-w-none">
+        <h2 className="text-xl font-semibold text-gray-900">About Base64 Encoder</h2>
+        <p className="text-gray-600 text-sm">
+          Encode and decode Base64 strings. Supports UTF-8 characters. Useful for encoding data 
+          for email, URLs, and data transfer.
+        </p>
       </div>
     </div>
   )

@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react'
+import RelatedTools from '../components/RelatedTools'
 
 export default function WordCounter() {
   const [text, setText] = useState('')
@@ -43,6 +44,18 @@ export default function WordCounter() {
             <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
           </div>
         ))}
+      </div>
+
+      <RelatedTools currentPath="/word-counter" />
+
+      <div className="mt-8 prose prose-gray max-w-none">
+        <h2 className="text-xl font-semibold text-gray-900">About Word Counter</h2>
+        <p className="text-gray-600 text-sm">
+          Our free word counter tool helps you quickly count words, characters, sentences, and paragraphs in any text. 
+          It also estimates reading time based on an average reading speed of 200 words per minute. 
+          Simply paste or type your text and see the statistics update in real-time. Perfect for essays, 
+          articles, social media posts, and any writing where word count matters.
+        </p>
       </div>
     </div>
   )

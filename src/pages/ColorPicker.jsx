@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import RelatedTools from '../components/RelatedTools'
 
 function hslToRgb(h, s, l) {
   s /= 100; l /= 100
@@ -170,6 +171,16 @@ export default function ColorPicker() {
             ))}
           </div>
         </div>
+      </div>
+
+      <RelatedTools currentPath="/color-picker" />
+
+      <div className="mt-8 prose prose-gray max-w-none">
+        <h2 className="text-xl font-semibold text-gray-900">About Color Picker</h2>
+        <p className="text-gray-600 text-sm">
+          Pick colors and get HEX, RGB, and HSL values. Choose from preset colors or use 
+          HSL sliders to find the perfect color. Copy values with one click.
+        </p>
       </div>
     </div>
   )
