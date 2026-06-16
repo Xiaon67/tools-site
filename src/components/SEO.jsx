@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
-const siteUrl = 'https://xiaon67.github.io/tools-site'
+const siteUrl = 'https://xiaon67.github.io'
 
 const pageMeta = {
   '/': {
